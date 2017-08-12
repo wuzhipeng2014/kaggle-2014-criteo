@@ -34,7 +34,7 @@ subprocess.call(cmd, shell=True)
 # cmd = 'rm -f te.gbdt.dense te.gbdt.sparse tr.gbdt.dense tr.gbdt.sparse'
 # subprocess.call(cmd, shell=True)
 
-#5.1 训练数据并行预处理 (线性模型)
+#5.1 生成ffm的输入特征 (线性模型)
 cmd = 'converters/parallelizer-b.py -s {nr_thread} converters/pre-b.py tr.csv tr.gbdt.out tr.ffm'.format(nr_thread=NR_THREAD)
 subprocess.call(cmd, shell=True) 
 
