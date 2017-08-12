@@ -19,7 +19,7 @@ cmd = 'converters/parallelizer-a.py -s {nr_thread} converters/pre-a.py te.csv te
 subprocess.call(cmd, shell=True) 
 
 
-#3. gbdt模型 生成数据特征
+#3. gbdt模型 生成新的数据特征
 cmd = './gbdt -t 30 -s {nr_thread} te.gbdt.dense te.gbdt.sparse tr.gbdt.dense tr.gbdt.sparse te.gbdt.out tr.gbdt.out'.format(nr_thread=NR_THREAD) 
 subprocess.call(cmd, shell=True)
 
