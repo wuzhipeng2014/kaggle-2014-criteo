@@ -7,7 +7,7 @@ from common import *
 if len(sys.argv) == 1:
     sys.argv.append('-h')
 
-from common import *
+from converters.common import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', '--nr_bins', type=int, default=int(1e+6))

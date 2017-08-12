@@ -6,6 +6,10 @@ NR_THREAD = 1
 
 start = time.time()
 
+'''----------------------------------------------------------------------------------------------'''
+'''--------------------------------GBDT模型--------------------------------------------'''
+'''----------------------------------------------------------------------------------------------'''
+
 #1. 计算正例 和负例 样本个数 及正例样本占比
 cmd = './utils/count.py tr.csv > fc.trva.t10.txt'
 subprocess.call(cmd, shell=True) 
@@ -23,6 +27,9 @@ subprocess.call(cmd, shell=True)
 cmd = './gbdt -t 30 -s {nr_thread} te.gbdt.dense te.gbdt.sparse tr.gbdt.dense tr.gbdt.sparse te.gbdt.out tr.gbdt.out'.format(nr_thread=NR_THREAD) 
 subprocess.call(cmd, shell=True)
 
+'''----------------------------------------------------------------------------------------------'''
+'''--------------------------------LR模型--------------------------------------------'''
+'''----------------------------------------------------------------------------------------------'''
 
 # cmd = 'rm -f te.gbdt.dense te.gbdt.sparse tr.gbdt.dense tr.gbdt.sparse'
 # subprocess.call(cmd, shell=True)
@@ -38,7 +45,7 @@ subprocess.call(cmd, shell=True)
 # cmd = 'rm -f te.gbdt.out tr.gbdt.out'
 # subprocess.call(cmd, shell=True)
 
-#6. 训练线性分类器
+#6. 训练线性分类器(??输入数据的类型)
 cmd = './ffm-train -k 4 -t 18 -s {nr_thread} -p te.ffm tr.ffm model'.format(nr_thread=NR_THREAD) 
 subprocess.call(cmd, shell=True)
 
