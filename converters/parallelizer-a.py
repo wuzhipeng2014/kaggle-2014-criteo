@@ -2,7 +2,7 @@
 
 import argparse, sys
 
-from common import *
+from converters.common import *
 
 def parse_args():
     
@@ -27,8 +27,10 @@ def main():
     
     split(args['src_path'], nr_thread, True)
 
+    # 将输入特征中的数字和分类特征分开存储到不同的文件， （数字特征和分类特征再分割成小文件供并行处理）
     parallel_convert(args['cvt_path'], [args['src_path'], args['dst1_path'], args['dst2_path']], nr_thread)
 
+    # 将分开的小文件合并到一起
     cat(args['dst1_path'], nr_thread)
 
     cat(args['dst2_path'], nr_thread)

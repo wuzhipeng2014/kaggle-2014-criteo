@@ -2,7 +2,7 @@
 
 import argparse, sys
 
-from common import *
+from converters.common import *
 
 def parse_args():
     
@@ -24,7 +24,8 @@ def main():
     args = parse_args()
 
     nr_thread = args['nr_thread']
-    
+
+    # 将大文件split为多个小文件供多线程使用
     split(args['src1_path'], nr_thread, True)
 
     split(args['src2_path'], nr_thread, False)
