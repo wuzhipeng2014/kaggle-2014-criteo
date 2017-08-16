@@ -2,7 +2,7 @@
 
 import argparse, csv, sys
 
-from converters.common import *
+from common import *
 
 if len(sys.argv) == 1:
     sys.argv.append('-h')

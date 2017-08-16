@@ -2,7 +2,7 @@
 
 import argparse, sys
 
-from converters.common import *
+from common import *
 
 def parse_args():
     
