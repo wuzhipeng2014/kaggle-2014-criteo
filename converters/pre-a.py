@@ -20,7 +20,7 @@ args = vars(parser.parse_args())
 # target_cat_feats = ['C2-[OPPO A33m]','C2-[HUAWEI MLA-AL10]','C2-[vivo Y51A]','C3-[武汉]','C3-[西安]','C2-[HUAWEI NXT-AL10]','C2-[vivo X9]','C2-[vivo Y51]','C2-[vivo V3Max A]','C2-[A31]','C2-[vivo Y67]','C3-[石家庄]','C3-[天津]','C2-[OPPO A59m]','C2-[HM NOTE 1LTE]','C2-[GN5001S]','C3-[苏州]','C2-[2014813]','C3-[东莞]','C3-[深圳]','C2-[OPPO R9s]','C2-[HUAWEI TAG-AL00]','C2-[OPPO A57]','C3-[广州]','C2-[OPPO R9m]','C3-[成都]','C2-[HM NOTE 1S]','C2-[OPPO A59s]','C3-[重庆]','C2-[vivo Y66]','C3-[上海]','C2-[HM 2A]','C2-[OPPO A33]','C2-[Redmi Note 2]','C3-[北京]','C2-[OPPO A37m]','C2-[Redmi Note 3]']
 target_cat_feats =[]
 
-file = open('/home/zhipengwu/secureCRT/format_top_1000_feature.txt')
+file = open('/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt')
 lines = file.readlines()
 for line in lines:
     target_cat_feats.append(line.strip('\n'))
