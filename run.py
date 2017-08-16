@@ -2,10 +2,10 @@
 
 import subprocess, sys, os, time
 
-NR_THREAD = 1
+NR_THREAD = 5
 
-train_file_name='toutiao_hotel_tr.csv_origin'
-test_file_name='toutiao_hotel_te.csv_origin'
+train_file_name='hotel_train_20170813.csv'
+test_file_name='hotel_test_20170813.csv'
 
 train_file_head=train_file_name.split(".")[0]
 test_file_head=test_file_name.split(".")[0]
