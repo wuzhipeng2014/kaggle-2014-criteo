@@ -33,11 +33,11 @@ with open(args['out_path'], 'w') as f:
             if type == 'C' and feat not in frequent_feats:
                 feat = feat.split('-')[0]+'less'
             if type == 'C':
-                field += 30
+                field += 33
             feats.append((field, feat))
 
         for i, feat in enumerate(line_gbdt.strip().split()[1:], start=1):
-            field = i + 34
+            field = i + 37
             feats.append((field, str(i)+":"+feat))
 
         feats = gen_hashed_fm_feats(feats, args['nr_bins'])
