@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse, csv, sys
+from GlobalVariable import *
 
 from common import *
 
@@ -21,7 +22,7 @@ args = vars(parser.parse_args())
 target_cat_feats =[]
 
 ## beta机器上运行
-file = open('/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt')
+file = open(TopFeatureFileName)
 
 ## 本地运行
 #file = open('/home/zhipengwu/secureCRT/format_top_1000_feature.txt')
@@ -32,7 +33,7 @@ for line in lines:
 with open(args['dense_path'], 'w') as f_d, open(args['sparse_path'], 'w') as f_s:
     for row in csv.DictReader(open(args['csv_path'])):
         feats = []
-        for j in range(1, 34):
+        for j in range(1, IntegerFeartureRange):
             val = row['I{0}'.format(j)]
             if val == '':
                 val = -10 
@@ -40,7 +41,7 @@ with open(args['dense_path'], 'w') as f_d, open(args['sparse_path'], 'w') as f_s
         f_d.write(row['Label'] + ' ' + ' '.join(feats) + '\n')
         
         cat_feats = set()
-        for j in range(1, 4):
+        for j in range(1, CategoryFeatureRange):
             field = 'C{0}'.format(j)
             key = field + '-' + row[field]
             cat_feats.add(key)

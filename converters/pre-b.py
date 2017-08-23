@@ -3,6 +3,7 @@
 import argparse, csv, sys
 
 from common import *
+from GlobalVariable import  *
 
 if len(sys.argv) == 1:
     sys.argv.append('-h')
@@ -18,6 +19,7 @@ parser.add_argument('out_path', type=str)
 args = vars(parser.parse_args())
 
 def gen_hashed_fm_feats(feats, nr_bins):
+    print(feat[0])
     feats = ['{0}:{1}:1'.format(field-1, hashstr(feat, nr_bins)) for (field, feat) in feats]
     return feats
 
@@ -33,12 +35,12 @@ with open(args['out_path'], 'w') as f:
             if type == 'C' and feat not in frequent_feats:
                 feat = feat.split('-')[0]+'less'
             if type == 'C':
-                field += 33
+                field += ffmCategoryFeatureStartIndex
             feats.append((field, feat))
 
         for i, feat in enumerate(line_gbdt.strip().split()[1:], start=1):
-            field = i + 37
+            field = i + ffmGBDTFeatrueStartIndex
             feats.append((field, str(i)+":"+feat))
         #todo
-        # feats = gen_hashed_fm_feats(feats, args['nr_bins'])
+        feats = gen_hashed_fm_feats(feats, args['nr_bins'])
         f.write(row['Label'] + ' ' + ' '.join(feats) + '\n')
