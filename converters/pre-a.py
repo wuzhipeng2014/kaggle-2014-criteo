@@ -21,10 +21,10 @@ args = vars(parser.parse_args())
 target_cat_feats =[]
 
 ## beta机器上运行
-# file = open('/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt')
+file = open('/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt')
 
 ## 本地运行
-file = open('/home/zhipengwu/secureCRT/format_top_1000_feature.txt')
+#file = open('/home/zhipengwu/secureCRT/format_top_1000_feature.txt')
 lines = file.readlines()
 for line in lines:
     target_cat_feats.append(line.strip('\n'))
