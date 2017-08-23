@@ -32,7 +32,7 @@ for line in lines:
 with open(args['dense_path'], 'w') as f_d, open(args['sparse_path'], 'w') as f_s:
     for row in csv.DictReader(open(args['csv_path'])):
         feats = []
-        for j in range(1, 33):
+        for j in range(1, 34):
             val = row['I{0}'.format(j)]
             if val == '':
                 val = -10 
@@ -40,7 +40,7 @@ with open(args['dense_path'], 'w') as f_d, open(args['sparse_path'], 'w') as f_s
         f_d.write(row['Label'] + ' ' + ' '.join(feats) + '\n')
         
         cat_feats = set()
-        for j in range(1, 3):
+        for j in range(1, 4):
             field = 'C{0}'.format(j)
             key = field + '-' + row[field]
             cat_feats.add(key)

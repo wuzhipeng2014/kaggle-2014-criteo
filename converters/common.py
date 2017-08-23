@@ -1,7 +1,7 @@
 import hashlib, csv, math, os, pickle, subprocess
 
 HEADER="Id,Label,I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26"
-HEADER="Label,I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,I17,I18,I19,I20,I21,I22,I23,I24,I25,I26,I27,I28,I29,C1,C2,C3"
+HEADER="Label,I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14,I15,I16,I17,I18,I19,I20,I21,I22,I23,I24,I25,I26,I27,I28,I29,I30,I31,I32,I33,C1,C2,C3"
 
 def open_with_first_line_skipped(path, skip=True):
     f = open(path)
@@ -15,15 +15,16 @@ def hashstr(str, nr_bins):
 
 def gen_feats(row):
     feats = []
-    for j in range(1, 30):
+    for j in range(1, 34):
         field = 'I{0}'.format(j)
         value = row[field]
         if value != '':
             value = float(value)
-            if value > 2:
-                value = int(math.log(float(value))**2)
-            else:
-                value = 'SP'+str(value)
+            #todo
+            # if value > 2:
+            #     value = int(math.log(float(value))**2)
+            # else:
+            #     value = 'SP'+str(value)
         key = field + '-' + str(value)
         feats.append(key)
     for j in range(1, 4):
