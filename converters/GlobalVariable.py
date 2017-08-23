@@ -9,7 +9,7 @@ ffmCategoryFeatureStartIndex=IntegerFeartureNum
 ffmGBDTFeatrueStartIndex=IntegerFeartureNum+CategoryFeatureNum
 
 #beta
-TopFeatureFileName='/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt'
+# TopFeatureFileName='/home/q/zhipeng.wu/toutiao/kaggle-2014-criteo/format_top_1000_feature.txt'
 
 #local
-# TopFeatureFileName='/home/zhipengwu/secureCRT/format_top_1000_feature.txt'
+TopFeatureFileName='/home/zhipengwu/secureCRT/format_top_1000_feature.txt'
