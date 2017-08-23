@@ -24,7 +24,7 @@ def gen_feats(row):
         if value != '':
             value = float(value)
             #todo
-            if value > 1500:
+            if value > 2:
                 value = int(math.log(float(value))**2)
             else:
                 value = 'SP'+str(value)
