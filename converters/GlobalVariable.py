@@ -1,6 +1,6 @@
 #encoding:utf-8
 
-IntegerFeartureNum=30
+IntegerFeartureNum=34
 CategoryFeatureNum=3
 
 IntegerFeartureRange=IntegerFeartureNum+1
