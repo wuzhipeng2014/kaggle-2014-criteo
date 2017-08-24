@@ -6,12 +6,12 @@ import subprocess, sys, os, time
 NR_THREAD = 5
 
 ## beta机器运行
-# train_file_name='hotel_train_20170813.libsvm_2017-08-22.csv'
-# test_file_name='hotel_test_20170813.libsvm_2017-08-22.csv'
+train_file_name='hotel_train_20170813.libsvm_2017-08-23.csv'
+test_file_name='hotel_test_20170813.libsvm_2017-08-23.csv'
 
 ## 本地运行
-train_file_name='hotel_train_20170813_libsvm_2017-08-23_1w.csv'
-test_file_name='hotel_test_20170813_libsvm_2017-08-23_1w.csv'
+# train_file_name='hotel_train_20170813_libsvm_2017-08-23_1w.csv'
+# test_file_name='hotel_test_20170813_libsvm_2017-08-23_1w.csv'
 
 train_file_head=train_file_name.split(".")[0]
 test_file_head=test_file_name.split(".")[0]
