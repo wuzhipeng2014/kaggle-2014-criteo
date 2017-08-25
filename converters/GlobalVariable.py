@@ -1,7 +1,7 @@
 #encoding:utf-8
 
-IntegerFeartureNum=15
-CategoryFeatureNum=2
+IntegerFeartureNum=35
+CategoryFeatureNum=3
 
 IntegerFeartureRange=IntegerFeartureNum+1
 CategoryFeatureRange=CategoryFeatureNum+1

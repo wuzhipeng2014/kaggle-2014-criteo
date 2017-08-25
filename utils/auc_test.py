@@ -33,7 +33,8 @@ def frange(x, y, jump):
 
 
 result = []
-for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.out.cal"):
+# for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.out.cal"):
+for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_feature_20170822.out.cal"):
 # for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813_18.out.cal"):
 # for line in open("/home/zhipengwu/work/kaggle-2014-criteo/hotel_test_20170813_10w.out.cal"):
     # print line.replace("\n","")
