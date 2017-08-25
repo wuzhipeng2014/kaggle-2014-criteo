@@ -9,8 +9,8 @@ NR_THREAD = 5
 # train_file_name='hotel_train_20170813.libsvm_2017-08-23.csv'
 # test_file_name='hotel_test_20170813.libsvm_2017-08-23.csv'
 
-train_file_name='toutiao_hotel_behavior_train_20170822.txt.csv'
-test_file_name='toutiao_hotel_behavior_test_20170822.txt.csv'
+train_file_name='toutiao_hotel_behavior_train_feature_20170822.txt.csv'
+test_file_name='toutiao_hotel_behavior_test_feature_20170822.txt.csv'
 
 ## 本地运行
 # train_file_name='hotel_train_20170813_libsvm_2017-08-23_1w.csv'

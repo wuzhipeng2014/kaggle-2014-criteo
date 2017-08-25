@@ -33,7 +33,7 @@ def frange(x, y, jump):
 
 
 result = []
-for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813.out_20170824_2.cal"):
+for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.out.cal"):
 # for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813_18.out.cal"):
 # for line in open("/home/zhipengwu/work/kaggle-2014-criteo/hotel_test_20170813_10w.out.cal"):
     # print line.replace("\n","")
@@ -42,7 +42,7 @@ for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813.out_20170824_2.c
 # print str(result)
 
 test = []
-for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813.libsvm.csv"):
+for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.txt_nohead.csv"):
 # for line in open("/home/zhipengwu/work/kaggle-2014-criteo/hotel_test_20170813_10w_no_head.libsvm.csv"):
     # print line.split(" ")[0]
     test.append(int(line.split(",")[0]))
@@ -56,7 +56,7 @@ y_scores = np.array(result)
 
 # print str(y_true)
 # print str(y_scores)
-for a in frange (0.1, 0.25, 0.01):
+for a in frange (0.25, 0.4, 0.01):
     print "## a=" + str(a)
     TP = float(((y_scores > float(a)) * (y_true == 1)).sum())
     FP = float(((y_scores > float(a)) * (y_true == 0)).sum())
