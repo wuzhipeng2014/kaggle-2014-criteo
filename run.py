@@ -62,8 +62,8 @@ subprocess.call(cmd, shell=True)
 # subprocess.call(cmd, shell=True)
 
 #6. 训练线性分类器(??输入数据的类型)
-cmd = './_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
-subproceffm-train -k 5 -t 18 -s {nr_thread} -p {te_file_head}.ffm {tr_file_head}.ffm model'.format(nr_thread=NR_THREAD,tr_filess.call(cmd, shell=True)
+cmd = './ffm-train -k 4 -t 18 -s {nr_thread} -p {te_file_head}.ffm {tr_file_head}.ffm model'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
+subprocess.call(cmd, shell=True)
 
 #7. 线性模型预测
 cmd = './ffm-predict {te_file_head}.ffm model {te_file_head}.out'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
