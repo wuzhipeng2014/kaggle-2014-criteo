@@ -34,8 +34,8 @@ def frange(x, y, jump):
 
 result = []
 # for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.out.cal"):
-# for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_feature_20170822.out.cal"):
-for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_feature_20170822.out.cal"):
+for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_feature_20170822.out.cal"):
+# for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_feature_20170822.out.cal"):
 # for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_behavior_train_feature_20170822.out.cal"):
 # for line in open("/home/zhipengwu/secureCRT/hotel_test_20170813_18.out.cal"):
 # for line in open("/home/zhipengwu/work/kaggle-2014-criteo/hotel_test_20170813_10w.out.cal"):
@@ -45,8 +45,8 @@ for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_featu
 # print str(result)
 
 test = []
-# for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.txt_nohead.csv"):
-for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_feature_20170822.txt.csv"):
+for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_behavior_test_20170822.txt_nohead.csv"):
+# for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_feature_20170822.txt.csv"):
 # for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_behavior_train_feature_20170822.txt.csv"):
 # for line in open("/home/zhipengwu/work/kaggle-2014-criteo/hotel_test_20170813_10w_no_head.libsvm.csv"):
     # print line.split(" ")[0]
