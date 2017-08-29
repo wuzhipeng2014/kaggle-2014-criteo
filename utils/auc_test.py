@@ -59,7 +59,7 @@ y_scores = np.array(result)
 
 # print str(y_true)
 # print str(y_scores)
-for a in frange (0.25, 0.4, 0.01):
+for a in frange (0.2, 0.3, 0.01):
     print "## a=" + str(a)
     TP = float(((y_scores > float(a)) * (y_true == 1)).sum())
     FP = float(((y_scores > float(a)) * (y_true == 0)).sum())
