@@ -46,7 +46,7 @@ subprocess.call(cmd, shell=True)
 
 
 #3. gbdt模型 生成新的数据特征
-cmd = './gbdt -t 35 -s {nr_thread} {te_file_head}.gbdt.dense {te_file_head}.gbdt.sparse {tr_file_head}.gbdt.dense {tr_file_head}.gbdt.sparse {te_file_head}.gbdt.out {tr_file_head}.gbdt.out'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
+cmd = './gbdt -t 27 -s {nr_thread} {te_file_head}.gbdt.dense {te_file_head}.gbdt.sparse {tr_file_head}.gbdt.dense {tr_file_head}.gbdt.sparse {te_file_head}.gbdt.out {tr_file_head}.gbdt.out'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
 subprocess.call(cmd, shell=True)
 
 '''----------------------------------------------------------------------------------------------'''
@@ -68,7 +68,7 @@ subprocess.call(cmd, shell=True)
 # subprocess.call(cmd, shell=True)
 
 #6. 训练线性分类器(??输入数据的类型)
-cmd = './ffm-train -k 6 -t 18 -s {nr_thread} -p {te_file_head}.ffm {tr_file_head}.ffm model'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
+cmd = './ffm-train -k 6 -t 15 -s {nr_thread} -p {te_file_head}.ffm {tr_file_head}.ffm model'.format(nr_thread=NR_THREAD,tr_file_name=train_file_name,tr_file_head=train_file_head,te_file_head=test_file_head,te_file_name=test_file_name)
 subprocess.call(cmd, shell=True)
 
 #7. 线性模型预测
