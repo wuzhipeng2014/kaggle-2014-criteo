@@ -8,6 +8,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 import sys
 
+print np.__path__
 a = sys.argv[1]
 a=float(0.2)
 print "## a=" + str(a)
@@ -50,7 +51,9 @@ test = []
 # for line in open("/home/zhipengwu/secureCRT/tt_toutiao_hotel_behavior_test_feature_20170822_nohead.txt.csv"):
 # for line in open("/home/zhipengwu/secureCRT/toutiao_hotel_combine_feature_20170822_test_nohead.csv"):
 # for line in open("/home/zhipengwu/secureCRT/test_toutiao_std_feature_20170822.libsvm_2017-08-25_nohead.csv"):
-for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_combine_feature_20170822_nohead.csv"):
+# for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_combine_feature_20170822_nohead.csv"):
+# for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_combine_feature_20170822_no_head.csv"):
+for line in open("/home/zhipengwu/secureCRT/test_toutiao_hotel_combine_feature_20170922_nohead.csv"):
     # print line.split(" ")[0]
     test.append(int(line.split(",")[0]))
 
@@ -63,7 +66,7 @@ y_scores = np.array(result)
 
 # print str(y_true)
 # print str(y_scores)
-for a in frange (0.2, 0.35, 0.01):
+for a in frange (0.2, 0.4, 0.01):
     print "## a=" + str(a)
     TP = float(((y_scores > float(a)) * (y_true == 1)).sum())
     FP = float(((y_scores > float(a)) * (y_true == 0)).sum())
